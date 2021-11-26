@@ -1,0 +1,7 @@
+zoznam:
+    label: Name
+    view:
+        form: $/jakub/todolist/models/zoznam/fields.yaml
+    manage:
+        form: $/jakub/todolist/models/zoznam/fields.yaml
+        list: $/jakub/todolist/models/zoznam/columns.yaml

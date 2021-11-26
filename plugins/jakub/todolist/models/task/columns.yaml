@@ -1,0 +1,21 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    Hotove:
+        label: Done
+        searchable: true
+    Task:
+        label: Task
+        searchable: true
+    
+    Priorita:
+        label: Priorita
+        searchable: true   
+    
+    meno: 
+        label: Meno
+        relation: zoznam
+        select: meno
+

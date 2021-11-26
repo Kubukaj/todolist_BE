@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Post
+
+# Model Form Field configuration
+form: $/jakub/blog/models/post/fields.yaml
+
+# Model Class name
+modelClass: Jakub\Blog\Models\Post
+
+# Default redirect location
+defaultRedirect: jakub/blog/posts
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: jakub/blog/posts/update/:id
+    redirectClose: jakub/blog/posts
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: jakub/blog/posts
+    redirectClose: jakub/blog/posts
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

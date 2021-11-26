@@ -1,0 +1,30 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    Hotove:
+        label: Done
+        searchable: true
+        type: checkbox
+        default: false
+    Task:
+        label: Task
+        searchable: true
+        type: textarea
+        size: large
+    
+    Priorita:
+        label: Priorita
+        default: Normalna
+        type: dropdown
+        options: 
+            HIGH: HIGH
+            MEDIUM: MEDIUM
+            LOW: LOW
+    
+    zoznam:
+      label: Category
+      type: relation
+      emptyOption: No category 
+      nameFrom: meno

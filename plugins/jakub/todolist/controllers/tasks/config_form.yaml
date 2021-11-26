@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Task
+
+# Model Form Field configuration
+form: $/jakub/todolist/models/task/fields.yaml
+
+# Model Class name
+modelClass: Jakub\Todolist\Models\Task
+
+# Default redirect location
+defaultRedirect: jakub/todolist/tasks
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: jakub/todolist/tasks/update/:id
+    redirectClose: jakub/todolist/tasks
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: jakub/todolist/tasks
+    redirectClose: jakub/todolist/tasks
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

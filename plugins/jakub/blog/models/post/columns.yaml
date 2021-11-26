@@ -1,0 +1,20 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    Title:
+        label: title
+        searchable: true
+    Obsah:
+        label: obsah
+        searchable: true
+    Meno:
+        label: meno
+        searchable: true
+    Videnia:
+        label: videnia
+        searchable: true

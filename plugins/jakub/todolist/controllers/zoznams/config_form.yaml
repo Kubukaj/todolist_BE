@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Zoznam
+
+# Model Form Field configuration
+form: $/jakub/todolist/models/zoznam/fields.yaml
+
+# Model Class name
+modelClass: Jakub\Todolist\Models\Zoznam
+
+# Default redirect location
+defaultRedirect: jakub/todolist/zoznams
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: jakub/todolist/zoznams/update/:id
+    redirectClose: jakub/todolist/zoznams
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: jakub/todolist/zoznams
+    redirectClose: jakub/todolist/zoznams
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

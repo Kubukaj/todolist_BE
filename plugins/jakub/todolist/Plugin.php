@@ -101,7 +101,7 @@ class Plugin extends PluginBase
                     'zoznam' =>  [
                         'label'       => 'Zoznam',
                         'url'         => Backend::url('jakub/todolist/zoznams'),
-                        'icon'        => 'icon-leaf',
+                        'icon'        => 'icon-list',
                         'permissions' => ['jakub.todolist.*'],
                         'order'       => 500,
                     ],

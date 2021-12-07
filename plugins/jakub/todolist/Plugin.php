@@ -90,6 +90,22 @@ class Plugin extends PluginBase
                 'icon'        => 'icon-leaf',
                 'permissions' => ['jakub.todolist.*'],
                 'order'       => 500,
+                'sideMenu'    => [
+                    'todolist' => [
+                        'label'       => 'Todolist',
+                        'url'         => Backend::url('jakub/todolist/tasks'),
+                        'icon'        => 'icon-leaf',
+                        'permissions' => ['jakub.todolist.*'],
+                        'order'       => 500,
+                    ],
+                    'zoznam' =>  [
+                        'label'       => 'Zoznam',
+                        'url'         => Backend::url('jakub/todolist/zoznams'),
+                        'icon'        => 'icon-leaf',
+                        'permissions' => ['jakub.todolist.*'],
+                        'order'       => 500,
+                    ],
+                ]
             ],
         ];
     }

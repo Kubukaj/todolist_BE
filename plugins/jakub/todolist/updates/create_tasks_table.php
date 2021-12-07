@@ -14,7 +14,7 @@ class CreateTasksTable extends Migration
             $table->timestamps('');
             $table->boolean('Hotove')->default(false);
             $table->string('Task')->nullable();
-            $table->enum('Priorita', [ 'HIGH', 'MEDIUM', 'LOW' ])->nullable();
+            $table->enum('Priorita', [ 'HIGH', 'MEDIUM', 'LOW', 'UNSET' ])->nullable();
             $table->integer('zoznam_id')->nullable();
         });
     }

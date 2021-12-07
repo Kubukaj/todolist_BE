@@ -37,7 +37,7 @@ class Tasks extends Controller
     }
     
      public function apiIndex(){
-        return Task::all();
+        return Task::with('zoznam')->get();
     }
     public function destroy($id){
     $task = Task::findOrFail($id);

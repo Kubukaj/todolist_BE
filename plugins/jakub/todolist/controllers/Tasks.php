@@ -39,6 +39,21 @@ class Tasks extends Controller
      public function apiIndex(){
         return Task::with('zoznam')->get();
     }
+    public function update($id){
+        $task = Task::findOrFail($id);
+        
+        if(input('Task')){
+            $task->Task=input('Task');
+        }
+        if(input('Hotove')){
+            $task->Hotove=input('Hotove');
+        }
+        if(input('Priorita')){
+            $task->Priorita=input('Priorita');
+        }
+        $task->save();
+        return $task;
+    }
     public function destroy($id){
     $task = Task::findOrFail($id);
     $task->delete();

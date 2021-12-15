@@ -35,40 +35,52 @@ class Tasks extends Controller
 
         BackendMenu::setContext('Jakub.Todolist', 'todolist', 'tasks');
     }
-    
-     public function apiIndex(){
+
+    public function apiIndex()
+    {
         return Task::with('zoznam')->get();
     }
-    public function update($id){
+
+    public function apiUpdate($id)
+    {
         $task = Task::findOrFail($id);
-        
-        if(input('Task')){
-            $task->Task=input('Task');
+
+        if (input('Task')) {
+            $task->Task = input('Task');
         }
-        if(input('Hotove')){
-            $task->Hotove=input('Hotove');
+        if (input('Hotove')) {
+            $task->Hotove = input('Hotove');
         }
-        if(input('Priorita')){
-            $task->Priorita=input('Priorita');
+        if (input('Priorita')) {
+            $task->Priorita = input('Priorita');
         }
+
+
         $task->save();
         return $task;
     }
-    public function destroy($id){
-    $task = Task::findOrFail($id);
-    $task->delete();
-    return response('Vymazane', 200);
+
+    public function destroy($id)
+    {
+        $task = Task::findOrFail($id);
+        $task->delete();
+        return response('Vymazane', 200);
     }
-    public function show($id){
+
+    public function show($id)
+    {
         return Task::findOrFail($id);
     }
-    public function store(){
+
+    public function store()
+    {
         $data = input();
         return Task::create($data);
     }
+
     public function callAction($method, $parameters = false)
-        {
-        $action = 'api'.ucfirst($method);
+    {
+        $action = 'api' . ucfirst($method);
         if (method_exists($this, $action) && is_callable(array($this, $action))) {
             return call_user_func_array(array($this, $action), $parameters);
         } else {
@@ -77,4 +89,3 @@ class Tasks extends Controller
     }
 }
 
-   
